@@ -13,7 +13,7 @@ namespace DAL
         /// Devuelve una lista de misiones
         /// </summary>
         /// <returns></returns>
-        private static List<Mision> ListarMisiones() { 
+        public static List<Mision> ListarMisiones() { 
             List<Mision> misiones = new List<Mision>();
             misiones.Add(new Mision(1, "Recoger impuestos en el restaurante.", 1));
             misiones.Add(new Mision(2, "Hacer una oferta que no puedan rechazar el sindicato de basura.", 2));
@@ -28,7 +28,7 @@ namespace DAL
         /// Devuelve una lista de candidatos
         /// </summary>
         /// <returns></returns>
-        private static List<Candidato> ListarCandidatos()
+        public static List<Candidato> ListarCandidatos()
         {
             List<Candidato> candidatos = new List<Candidato>();
             candidatos.Add(new Candidato(1, "Vito", "Gordon", "Pizza Street 1232", "USA", "5456768", new DateTime(1961, 11, 10), 2500));
@@ -40,14 +40,6 @@ namespace DAL
             candidatos.Add(new Candidato(7, "Luigi", "Pepperoni", "Piaza Roma, 3", "Italia", "78516547", new DateTime(1999, 04, 05), 16000));
             candidatos.Add(new Candidato(8, "Silvio", "Dante", "Town Street, 56", "USA", "87563547", new DateTime(1996, 01, 30), 2000));
             return candidatos;
-        }
-
-        public static List<Mision> GetMisiones() {
-            return ListarMisiones();
-        }
-
-        public static List<Candidato> GetCandidatos() {
-            return ListarCandidatos();
         }
     }
 }
