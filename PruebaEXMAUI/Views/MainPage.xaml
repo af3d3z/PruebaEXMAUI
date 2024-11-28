@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PruebaEXMAUI.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <ListView>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <HorizontalStackLayout Spacing="10">
+                                <Label Text="{Binding Nombre}"></Label>
+                                <Label Text="{Binding Apellidos}"></Label>
+                            </HorizontalStackLayout>
+                            <VerticalStackLayout Spacing="10">
+                                <Label Text="Dirección: "></Label>
+                                <Label Text="{Binding Direccion}"></Label>
+                            </VerticalStackLayout>
+                            <VerticalStackLayout Spacing="10">
+                                <Label Text="Edad: "></Label>
+                                <Label Text="{Binding Edad}"></Label>
+                            </VerticalStackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
