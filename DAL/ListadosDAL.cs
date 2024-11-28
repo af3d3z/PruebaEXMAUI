@@ -41,5 +41,26 @@ namespace DAL
             candidatos.Add(new Candidato(8, "Silvio", "Dante", "Town Street, 56", "USA", "87563547", new DateTime(1996, 01, 30), 2000));
             return candidatos;
         }
+
+        /// <summary>
+        /// Funcion estatica que devuelve una lista de candidatos en base a distintos filtros, si minEdad y maxEdad son 0, filtrara por el pais
+        /// y si se proveen la edad minima y maxima.
+        /// </summary>
+        /// <param name="pais"></param>
+        /// <param name="minEdad"></param>
+        /// <param name="maxEdad"></param>
+        /// <returns>Listado de candidatos filtrado</returns>
+        public static List<Candidato> ListarCandidatosPorFiltro(string pais, int minEdad = 0, int maxEdad = 0) { 
+            List<Candidato> candidatos = new List<Candidato>();
+            if (minEdad == 0 && maxEdad == 0)
+            {
+                candidatos = ListarCandidatos().Where(cand => cand.Pais.Equals(pais)).ToList();
+            }
+            else {
+                candidatos = ListarCandidatos().Where(cand => cand.Pais.Equals(pais) && (DateTime.Now.Year - cand.FechaNac.Year) > minEdad && (DateTime.Now.Year - cand.FechaNac.Year) < maxEdad).ToList();
+            }
+
+            return candidatos;
+        }
     }
 }

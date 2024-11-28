@@ -16,7 +16,7 @@ namespace DAL
         /// <param name="id"></param>
         /// <returns></returns>
         public static Candidato GetCandidato(int id) { 
-            Candidato cand = ListadosDAL.ObtenerCandidatosDAL().Where(candidato => candidato.ID == id).FirstOrDefault();
+            Candidato cand = ListadosDAL.ListarCandidatos().Where(candidato => candidato.ID == id).FirstOrDefault();
             return cand;
         }
     }

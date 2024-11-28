@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Windows.System.UserProfile;
 
 namespace PruebaEXMAUI.Models
 {
@@ -18,11 +17,10 @@ namespace PruebaEXMAUI.Models
         /// <summary>
         /// constructor vacío
         /// </summary>
-        public CandidatoConEdad() { 
-            
-        }
+        public CandidatoConEdad() { }
 
-        public CandidatoConEdad(Candidato candidato) : base(candidato) { 
+        public CandidatoConEdad(Candidato candidato) : base(candidato) {
+            this.Edad = DateTime.Now.Year - candidato.FechaNac.Year;
         }
         #endregion
 

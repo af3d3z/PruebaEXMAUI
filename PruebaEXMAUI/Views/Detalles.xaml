@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PruebaEXMAUI.Views.Detalles"
+             Title="Detalles">
+
+    <VerticalStackLayout Spacing="20">
+        <HorizontalStackLayout Spacing="10">
+            <Label Text="{Binding Nombre}" FontSize="25"></Label>
+            <Label Text="{Binding Apellidos}" FontSize="25"></Label>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout Spacing="10">
+            <Label Text="Dirección: "></Label>
+            <Label Text="{Binding Direccion}"></Label>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout Spacing="10">
+            <Label Text="Teléfono:"></Label>
+            <Label Text="{Binding Telefono}"></Label>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout Spacing="10">
+            <Label Text="Edad: "></Label>
+            <Label Text="{Binding Edad}"></Label>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout Spacing="10">
+            <Label Text="Precio medio por misión:"></Label>
+            <Label Text="{Binding PrecioMedio}"></Label>
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>

@@ -63,12 +63,14 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Models\ViewModels\" />
+	  <ProjectReference Include="..\BL\BL.csproj" />
+	  <ProjectReference Include="..\ENT\ENT.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\BL\BL.csproj" />
-	  <ProjectReference Include="..\ENT\ENT.csproj" />
+	  <MauiXaml Update="Views\Detalles.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 
 </Project>
